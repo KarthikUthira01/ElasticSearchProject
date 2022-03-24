@@ -30,7 +30,7 @@ namespace ElasticSearchProject.Controllers
             return View();
         }
         /// <summary>
-        /// This index is used to retrieve data from Book index(multiple fields).
+        /// Testing method for queries.
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
@@ -84,7 +84,7 @@ namespace ElasticSearchProject.Controllers
             return View(results);
         }
         /// <summary>
-        /// This index is used to retrieve data from User index.
+        /// This method is used to retrieve data from All Indices.
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
