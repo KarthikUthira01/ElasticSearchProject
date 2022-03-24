@@ -1,0 +1,34 @@
+﻿ @model Nest.ISearchResponse<Dyn>
+
+<form class="form-group" asp-controller="Home" asp-action="Index1" method="post">
+    <div class="row d-flex justify-content-center">
+
+
+
+        <input class="form-control col-4 text-dark" type="text" name="query" placeholder="Please type any word here to search" />
+        <input class="form-control col-1 btn-success text-white" type="submit" value="search">
+    </div>
+</form>
+<hr />
+<hr />
+<div class="text-center bg-secondary" style="color:azure;font-family:Calibri;">
+    @if (Model.Documents.Any())
+    {
+         
+    <ul>
+        @foreach (var doc in Model.Documents)
+        {
+
+
+            @if (doc.Title == null)
+            {
+                <li style="list-style:none">Name : @doc.Name || Education : @doc.Education</li>
+            }
+            else
+            {
+                <li style="list-style:none">Title : @doc.Title || Author : @doc.Authors</li>
+            }
+        }
+    </ul>
+    }
+</div>

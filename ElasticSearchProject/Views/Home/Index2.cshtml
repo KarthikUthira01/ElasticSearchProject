@@ -1,0 +1,26 @@
+﻿
+@model Nest.ISearchResponse<User>
+
+<form class="form-group" asp-controller="Home" asp-action="Index2" method="post">
+    <div class="row d-flex justify-content-center">
+
+
+
+        <input class="form-control col-4 text-dark" type="text" name="query" placeholder="Please type any word here to search" />
+        <input class="form-control btn-success col-1 text-white " type="submit" value="search">
+    </div>
+</form>
+<hr />
+<hr />
+<div class="text-center bg-secondary" style="font-family:Calibri;color:white">
+    @if (Model.Documents.Any())
+    {
+       
+        <ul>
+            @foreach (var user in Model.Documents)
+            {
+                <li style="list-style:none">Name: @user.Name (Education: @user.Education)</li>
+            }
+        </ul>
+    }
+</div>
